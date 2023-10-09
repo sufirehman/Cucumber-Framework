@@ -42,6 +42,10 @@
 package StepDefinitions;
 
 import Utility.BrowserDriver;
+import Utility.ExtentManager;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.By;
@@ -57,25 +61,30 @@ import pages.LoginPage;
 
 public class logout {
     private WebDriver driver;
-
+    private ExtentReports extent;
+    private ExtentTest test;
     @Before
-    public void setUp() {
+    public void setUp(Scenario scenario) {
+
+        extent = ExtentManager.getInstance();
+        test = extent.createTest(scenario.getName());
         this.driver = BrowserDriver.getDriver();
     }
 
 
     @Then("user clicks on menu button")
     public void click_on_menu() {
+        test.info("user clicks on menu button");
         driver.findElement(By.xpath("//*[@id=\"menu_button_container\"]/div/div[3]/div/button")).click();
     }
 
     @Then("user perform logout")
     public void logout() {
+        test.info("user click on logout");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement logoutLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"logout_sidebar_link\"]")));
         logoutLink.click();
     }
-
     @After
     public void tearDown() {
         BrowserDriver.closeDriver();

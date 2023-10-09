@@ -20,7 +20,7 @@ public class BrowserDriver {
     }
 
     private static void initializeDriver() {
-        String browserType = System.getProperty("browser", "firefox");
+        String browserType = System.getProperty("browser", "chrome");
         WebDriver driver;
         switch (browserType.toLowerCase()) {
             case "chrome":

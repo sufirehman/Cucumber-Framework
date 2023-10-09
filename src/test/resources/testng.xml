@@ -1,25 +1,3 @@
-<!--<suite name="Cucumber Parallel Tests" parallel="tests" thread-count="4">-->
-<!--    <test name="AddToCartTests">-->
-<!--        <packages>-->
-<!--            <package name="StepDefinitions.addToCart"/>-->
-<!--        </packages>-->
-<!--    </test>-->
-<!--    <test name="CheckoutTests">-->
-<!--        <packages>-->
-<!--            <package name="StepDefinitions.checkout"/>-->
-<!--        </packages>-->
-<!--    </test>-->
-<!--    <test name="LoginTests">-->
-<!--        <packages>-->
-<!--            <package name="StepDefinitions.login"/>-->
-<!--        </packages>-->
-<!--    </test>-->
-<!--    <test name="LogoutTests">-->
-<!--        <packages>-->
-<!--            <package name="StepDefinitions.logout"/>-->
-<!--        </packages>-->
-<!--    </test>-->
-<!--</suite>-->
 
 <suite name="Cucumber Parallel Tests" parallel="methods" thread-count="6">
     <test name="FeatureTests" time-out="300000">
