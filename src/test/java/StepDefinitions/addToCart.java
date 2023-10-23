@@ -45,6 +45,7 @@ public class addToCart {
     public void click_on_cart() {
         cartPage.cart_click();
         test.log(Status.INFO, "Clicked on cart");
+
     }
 
     @Then("user verify that the product should be added to the cart")
