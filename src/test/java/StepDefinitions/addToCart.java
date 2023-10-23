@@ -32,7 +32,7 @@ public class addToCart {
     @Then("user clicks on Sauce Labs Backpack product")
     public void click_on_product() {
         homePage.click_on_saucelabs();
-        test.log(Status.INFO, "Clicked on Sauce Labs Backpack product");
+        test.log(Status.INFO, "Clicked on Sauce Labs Backpack product123");
     }
 
     @Then("user adds Sauce Labs Backpack product to cart")
