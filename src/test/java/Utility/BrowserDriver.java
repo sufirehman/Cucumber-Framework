@@ -54,6 +54,7 @@ package Utility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -76,13 +77,18 @@ public class BrowserDriver {
         WebDriver driver;
         switch (browserType.toLowerCase()) {
             case "chrome":
+//                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+//                ChromeOptions options = new ChromeOptions();
+//                driver = new ChromeDriver(options);
+//                break;
+
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
-                FirefoxOptions options = new FirefoxOptions();
-                driver = new FirefoxDriver(options);
+                FirefoxOptions options1 = new FirefoxOptions();
+                driver = new FirefoxDriver(options1);
                 break;
             default:
                 throw new IllegalArgumentException("Invalid browser type: " + browserType);
