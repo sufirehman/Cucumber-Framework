@@ -58,5 +58,4 @@ jobs:
       - name: Build and run tests with Maven
         run: mvn clean test
 
-      # Add more steps as needed for your specific workflow
 
