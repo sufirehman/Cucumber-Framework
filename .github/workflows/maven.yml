@@ -1,22 +1,62 @@
-name: Java Tests
+#name: Java Tests
+#
+#on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+#
+#jobs:
+#  test-java-project:
+#    runs-on: self-hosted
+#    steps:
+#      - name: Check out code
+#        uses: actions/checkout@v2
+#
+#      - name: Set up JDK 17
+#        uses: actions/setup-java@v1
+#        with:
+#          java-version: 17
+#
+#      - name: Run Maven tests
+#        run: mvn clean test
+
+name: Pull Connect Automation Framework
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  test-java-project:
-    runs-on: self-hosted
+  pull-connect-automation-framework:
+    runs-on: self-hosted # Use self-hosted runner as specified in your original YAML
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2 # This step checks out your repository
+        with:
+          ref: main # Ensure it's on the main branch (updated from 'master' to 'main' according to your original YAML)
+
+      - name: Run Something
+        run: |
+          echo "running something"
+          cd C:\Users\qapcuser\automation\cicd-connect\cte
+          git reset --hard HEAD
+          git pull origin main
+          git checkout main
 
       - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
           java-version: 17
 
-      - name: Run Maven tests
+      - name: Set up Maven
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y maven
+
+      - name: Build and run tests with Maven
         run: mvn clean test
+
+      # Add more steps as needed for your specific workflow
+
