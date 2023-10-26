@@ -57,7 +57,7 @@ public class addToCart {
     @Then("user remove product from shopping cart")
     public void remove_product() {
         cartPage.click_on_remove();
-        test.log(Status.INFO, "Removed product from cart123");
+        test.log(Status.INFO, "Removed product from cart");
     }
     @Then("user close Browser")
     public void close_browser() {
