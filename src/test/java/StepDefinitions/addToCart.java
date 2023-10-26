@@ -67,7 +67,7 @@ public class addToCart {
     }
     @Then("user verify that product is removed from the cart")
     public void verify_item_removed() {
-        test.log(Status.PASS, "Verified product removed from cart");
+        test.log(Status.PASS, "Verified product removed from cart12");
     }
     @After
     public void tearDown() {
