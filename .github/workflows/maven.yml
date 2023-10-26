@@ -100,7 +100,7 @@ jobs:
 
       - name: Run Git Commands
         run: |
-          cmd /c .\git_commands.bat
+          cmd /c D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Cucumber_practice\.github\workflows\git_commands.bat
 
 
 
