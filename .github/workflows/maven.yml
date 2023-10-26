@@ -100,7 +100,8 @@ jobs:
 
       - name: Run Git Commands
         run: |
-          call git_commands.bat
+          .\git_commands.bat
+
 
 
 
