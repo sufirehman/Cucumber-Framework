@@ -48,7 +48,7 @@ public class addToCart {
 
     }
 
-    @Then("user verify that the product should be added to the cart123")
+    @Then("user verify that the product should be added to the cart")
     public void product_cart() {
         cartPage.verify_product();
         test.log(Status.INFO, "Verified product in cart");
