@@ -96,12 +96,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2 # This step checks out your repository
         with:
-          ref: master # Ensure it's on the master branch
+          ref: main # Ensure it's on the master branch
 
       - name: Run Something
         run: |
           echo "running something"
-          cd D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Cucumber_practice
+          cd "D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Cucumber_practice"
           git reset --hard HEAD
           git pull origin main
           git checkout main
