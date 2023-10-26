@@ -91,7 +91,7 @@ on:
 
 jobs:
   pull-connect-automation-framework:
-    runs-on: label-1
+    runs-on: self-hosted
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2 # This step checks out your repository
