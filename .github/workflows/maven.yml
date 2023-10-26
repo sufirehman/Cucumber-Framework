@@ -96,7 +96,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2 # This step checks out your repository
         with:
-          ref: main # Ensure it's on the master branch
+          ref: main # Ensure it's on the main branch
+
+      - name: Change Ownership
+        run: |
+          takeown /F "D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Desktop\Cucumber-Framework\Cucumber-Framework" /R /D Y
+          icacls "D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Desktop\Cucumber-Framework\Cucumber-Framework" /grant:r "%USERNAME%:(OI)(CI)F" /T
 
       - name: Run Something
         run: |
@@ -105,6 +110,7 @@ jobs:
           git reset --hard HEAD
           git pull origin main
           git checkout main
+
 
 
 
