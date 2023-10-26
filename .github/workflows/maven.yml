@@ -96,7 +96,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2 # This step checks out your repository
         with:
-          ref: main # Ensure it's on the main branch
+          ref: main
 
       - name: Run Something
         run: |
