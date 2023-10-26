@@ -98,11 +98,13 @@ jobs:
         with:
           ref: main
 
-      - name: Run Git Commands
+      - name: Run Something
         run: |
-          cmd /c D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Cucumber_practice\.github\workflows\git_commands.bat
-
-
+          echo "running something"
+          cd "D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Desktop\Cucumber-Framework"
+          git reset --hard HEAD
+          git pull origin main
+          git checkout main
 
 
 
