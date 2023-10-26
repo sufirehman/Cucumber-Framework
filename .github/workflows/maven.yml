@@ -101,7 +101,7 @@ jobs:
       - name: Run Something
         run: |
           echo "running something"
-          cd "D:\OneDrive - PERSEUS MANAGEMENT GROUP INC\Cucumber_practice"
+          cd Cucumber-Framework
           git reset --hard HEAD
           git pull origin main
           git checkout main
