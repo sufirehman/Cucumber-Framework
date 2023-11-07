@@ -32,13 +32,13 @@ public class addToCart {
     @Then("user clicks on Sauce Labs Backpack product")
     public void click_on_product() {
         homePage.click_on_saucelabs();
-        test.log(Status.INFO, "Clicked on Sauce Labs Backpack product123");
+        test.log(Status.INFO, "Clicked on Sauce Labs Backpack product");
     }
 
     @Then("user adds Sauce Labs Backpack product to cart")
     public void add_to_cart() {
         cartPage.product_to_cart();
-        test.log(Status.INFO, "Added Sauce Labs Backpack product to cart1233");
+        test.log(Status.INFO, "Added Sauce Labs Backpack product to cart");
     }
     @Then("user click on cart")
     public void click_on_cart() {
@@ -66,7 +66,7 @@ public class addToCart {
     }
     @Then("user verify that product is removed from the cart")
     public void verify_item_removed() {
-        test.log(Status.PASS, "Verified product removed from cart123");
+        test.log(Status.PASS, "Verified product removed from cart");
     }
     @After
     public void tearDown() {
