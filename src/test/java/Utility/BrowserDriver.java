@@ -77,14 +77,14 @@ public class BrowserDriver {
         WebDriver driver;
         switch (browserType.toLowerCase()) {
             case "chrome":
-//                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-//                ChromeOptions options = new ChromeOptions();
-//                driver = new ChromeDriver(options);
-//                break;
-
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+                ChromeOptions options = new ChromeOptions();
+                driver = new ChromeDriver(options);
                 break;
+
+//                WebDriverManager.chromedriver().setup();
+//                driver = new ChromeDriver();
+//                break;
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
                 FirefoxOptions options1 = new FirefoxOptions();

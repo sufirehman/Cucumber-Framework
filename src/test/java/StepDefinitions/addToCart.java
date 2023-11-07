@@ -40,7 +40,6 @@ public class addToCart {
         cartPage.product_to_cart();
         test.log(Status.INFO, "Added Sauce Labs Backpack product to cart1233");
     }
-
     @Then("user click on cart")
     public void click_on_cart() {
         cartPage.cart_click();
