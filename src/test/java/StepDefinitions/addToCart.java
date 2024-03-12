@@ -38,7 +38,7 @@ public class addToCart {
     @Then("user adds Sauce Labs Backpack product to cart")
     public void add_to_cart() {
         cartPage.product_to_cart();
-        test.log(Status.INFO, "Added Sauce Labs Backpack product to cart");
+        test.log(Status.INFO, "Added Sauce Labs Backpack products to cart");
     }
     @Then("user click on cart")
     public void click_on_cart() {
