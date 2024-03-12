@@ -82,7 +82,7 @@ public class logout {
     public void logout() {
         test.info("user click on logout");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement logoutLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"logout_sidebar_link\"]")));
+        WebElement logoutLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class=\"bm-item-list\"]/descendant::*[3]")));
         logoutLink.click();
     }
     @After
