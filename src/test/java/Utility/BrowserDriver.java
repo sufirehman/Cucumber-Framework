@@ -96,6 +96,27 @@ public class BrowserDriver {
         driverThreadLocal.set(driver);
     }
 
+    //private static void initializeDriver() {
+//        String browserType = System.getProperty("browser", "chrome");
+//        WebDriver driver;
+//        switch (browserType.toLowerCase()) {
+//            case "chrome":
+//                WebDriverManager.chromedriver().setup(); // Automatically manages ChromeDriver
+//                ChromeOptions options = new ChromeOptions();
+//                driver = new ChromeDriver(options);
+//                break;
+//            case "firefox":
+//                WebDriverManager.firefoxdriver().setup(); // Automatically manages GeckoDriver
+//                FirefoxOptions options1 = new FirefoxOptions();
+//                driver = new FirefoxDriver(options1);
+//                break;
+//            default:
+//                throw new IllegalArgumentException("Invalid browser type: " + browserType);
+//        }
+//        driverThreadLocal.set(driver);
+//    }
+
+
 
     public static void closeDriver() {
         WebDriver driver = driverThreadLocal.get();

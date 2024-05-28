@@ -8,7 +8,7 @@ public class ExtentManager {
     public static ExtentReports getInstance() {
         if (extent == null) {
             extent = new ExtentReports();
-            ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("C:\\Users\\rehmasuf\\OneDrive - PERSEUS MANAGEMENT GROUP INC\\Cucumber_practice\\Report\\ExtentReport.html");
+            ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("C:\\Cucumber_Framework\\Report\\ExtentReport.html");
             extent.attachReporter(htmlReporter);
         }
         return extent;
