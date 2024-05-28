@@ -58,30 +58,6 @@
 #      - name: Build and run tests with Maven
 #        run: mvn clean test
 
-#name: Pull Connect Automation Framework
-#
-#on:
-#  push:
-#    branches:
-#      - main
-#
-#jobs:
-#  pull-connect-automation-framework:
-#    runs-on: self-hosted # Use self-hosted runner as specified in your original YAML
-#    steps:
-#      - name: Checkout Repository
-#        uses: actions/checkout@v2 # This step checks out your repository
-#        with:
-#          ref: main # Ensure it's on the main branch (updated from 'master' to 'main' according to your original YAML)
-#
-#      - name: Set up JDK 17
-#        uses: actions/setup-java@v1
-#        with:
-#          java-version: 17
-#
-#      - name: Build and run tests with Maven
-#        run: mvn clean test
-
 name: Pull Connect Automation Framework
 
 on:
@@ -91,20 +67,12 @@ on:
 
 jobs:
   pull-connect-automation-framework:
-    runs-on: self-hosted
+    runs-on: self-hosted # Use self-hosted runner as specified in your original YAML
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 # This step checks out your repository
         with:
-          ref: main
-
-      - name: Run Something
-        run: |
-          echo "running something"
-          cd "C:\Cucumber_Framework\actions-runner"
-          git reset --hard HEAD
-          git pull origin main
-          git checkout main
+          ref: main # Ensure it's on the main branch (updated from 'master' to 'main' according to your original YAML)
 
       - name: Set up JDK 17
         uses: actions/setup-java@v1
@@ -113,6 +81,38 @@ jobs:
 
       - name: Build and run tests with Maven
         run: mvn clean test
+
+#name: Pull Connect Automation Framework
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#jobs:
+#  pull-connect-automation-framework:
+#    runs-on: self-hosted
+#    steps:
+#      - name: Checkout Repository
+#        uses: actions/checkout@v2
+#        with:
+#          ref: main
+#
+#      - name: Run Something
+#        run: |
+#          echo "running something"
+#          cd "C:\Cucumber_Framework\actions-runner"
+#          git reset --hard HEAD
+#          git pull origin main
+#          git checkout main
+#
+#      - name: Set up JDK 17
+#        uses: actions/setup-java@v1
+#        with:
+#          java-version: 17
+#
+#      - name: Build and run tests with Maven
+#        run: mvn clean test
 
 
 
